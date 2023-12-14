@@ -1,0 +1,21 @@
+.post {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.header {
+  text-align: center;
+  font-size: 18px;
+}
+
+.tagBox {
+  display: flex;
+  gap: 25px;
+}
+
+.tag {
+  background-color: #424242;
+  padding: 0px 10px;
+  border-radius: 10px;
+}

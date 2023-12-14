@@ -1,0 +1,30 @@
+nav {
+  background-color: #303030;
+}
+
+.navList {
+  width: 1200px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.363);
+}
+
+footer {
+  background-color: #303030;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
