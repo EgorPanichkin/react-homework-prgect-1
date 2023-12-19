@@ -18,3 +18,31 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+
+button {
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 1px solid rgba(85, 85, 85, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 100, 100, 0.3);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(100, 100, 100, 0.3);
+}
+
+.delete {
+  background-color: #7d0000;
+}
+
+.yesBtn {
+  background-color: #007d00;
+  margin-right: 30px;
+}

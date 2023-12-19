@@ -1,10 +1,12 @@
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import style from "../styles/Form.module.css"
 
 export default function Form() {
   const [title, setTitle] = useState('')
   const [post, setPost] = useState('')
+  const nav = useNavigate()
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -16,9 +18,7 @@ export default function Form() {
     const postRequest = await axios.post('https://dummyjson.com/posts/add', newPost)
     console.log(postRequest);
     if (postRequest.status === 200) {
-      setTitle('')
-      setPost('')
-      alert('Post published successfull')
+      nav("/posts")
     }
   }
 
@@ -38,7 +38,7 @@ export default function Form() {
   return (
     <div className="wrapper">
       <h3>Write new post</h3>
-      <form className={style.form}>
+      <form className={style.form} onSubmit={(e) => handleSubmit(e)}>
         <label>
           Title:
           <input className={style.titleInput} value={title} onChange={(e) => handleChange(e.target)} type="text" id="title"/>
@@ -47,7 +47,7 @@ export default function Form() {
           Post:
           <textarea className={style.postInput} value={post} onChange={(e) => handleChange(e.target)} type="text" id="post"/>
         </label>
-        <button className={style.submitBtn} type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
+        <button className={style.submitBtn} type="submit" >Submit</button>
       </form>
     </div>
   )

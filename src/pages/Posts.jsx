@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import style from '../styles/Posts.module.css'
 
 export default function Posts() {
@@ -11,7 +12,7 @@ export default function Posts() {
       console.log(responce);
       setPostData(responce.data)
     } catch (error) {
-      console.error(`Responce ERROR`);
+      console.error(`Responce ERROR`, error.message);
     }
   }
   
@@ -26,7 +27,7 @@ export default function Posts() {
           {postData.posts.map(post => {
             return (
               <div key={post.id} className={style.post}>
-                <h3 className={style.header}>{post.title}</h3>
+                <Link to={`/Posts/${post.id}`}><h3 className={style.header}>{post.title}</h3></Link>
                 <p>{post.body}</p>
                 <div className={style.tagBox}>
                   {post.tags.map((tag) => {
