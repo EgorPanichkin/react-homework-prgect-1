@@ -2,6 +2,7 @@
   margin: 20px 0;
   padding: 20px;
   border: 1px solid white;
+  border-radius: 15px;
 }
 
 .header {
@@ -18,4 +19,20 @@
   background-color: #424242;
   padding: 0px 10px;
   border-radius: 10px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buttonBox button {
+  width: 35px;
+  height: 35px;
+  /* background-color: #ffffff00; */
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
 }
